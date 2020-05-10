@@ -19,6 +19,9 @@ import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
 import Table from "../../components/Table/Table";
 
+// User Profile
+import UserImage from "../../assets/images/avatar.png";
+
 const ActiveProjects = () => {
   const [icons, setIcons] = useState([
     { id: 1, src: houseIcon },
@@ -28,16 +31,72 @@ const ActiveProjects = () => {
     { id: 5, src: logoutIcon },
   ]);
 
+  const [pageName, setPageName] = useState("Active Projects");
+  const [userData, setUserData] = useState({
+    name: "Michal",
+    projects: [
+      {
+        projName: "test1",
+        projDecs: "lorem",
+        projID: 1,
+        status: "Finished",
+        IsLiked: false,
+      },
+      {
+        projName: "test2",
+        projDecs: "lorem",
+        projID: 2,
+        status: "In progress",
+        IsLiked: true,
+      },
+      {
+        projName: "test3",
+        projDecs: "lorem",
+        projID: 3,
+        status: "Behind Schedule",
+        IsLiked: false,
+      },
+      {
+        projName: "test4",
+        projDecs: "lorem",
+        projID: 4,
+        status: "Finished",
+        IsLiked: false,
+      },
+      {
+        projName: "test5",
+        projDecs: "lorem",
+        projID: 5,
+        status: "Finished",
+        IsLiked: true,
+      },
+      {
+        projName: "test6",
+        projDecs: "lorem",
+        projID: 6,
+        status: "Finished",
+        IsLiked: false,
+      },
+    ],
+    image: UserImage,
+  });
+
   return (
-    <div>
+    <div className={styles.wrapper}>
       <div className={styles.navbarWrapper}>
-        <Navbar />
+        <Navbar icons={icons} />
       </div>
-      <div className={styles.headerWrapper}>
-        <Header />
-      </div>
-      <div className={styles.tableWrapper}>
-        <Table />
+      <div className={styles.innerWrapper}>
+        <div className={styles.headerWrapper}>
+          <Header
+            userName={userData.name}
+            userImage={userData.image}
+            pageName={pageName}
+          />
+        </div>
+        <div className={styles.tableWrapper}>
+          <Table projects={userData.projects} />
+        </div>
       </div>
     </div>
   );
