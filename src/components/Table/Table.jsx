@@ -1,11 +1,17 @@
 import React from "react";
-
+import ProjectSearch from "../ProjectSearch/ProjectSearch";
+import ProjectList from "../ProjectList/ProjectList";
 import styles from "./Table.module.css";
 
-const Table = () => {
+const Table = ({ projects }) => {
   return (
     <div className={styles.wrapper}>
-      <p>Table</p>
+      <div className={styles.searchWrapper}>
+        <ProjectSearch />
+      </div>
+      <div className={styles.listWrapper}>
+        <ProjectList projects={projects} />
+      </div>
     </div>
   );
 };

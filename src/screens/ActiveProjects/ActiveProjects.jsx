@@ -24,10 +24,10 @@ import UserImage from "../../assets/images/avatar.png";
 
 const ActiveProjects = () => {
   const [icons, setIcons] = useState([
-    { id: 1, src: houseIcon },
-    { id: 2, src: pieChartIcon },
-    { id: 3, src: garbageIcon },
-    { id: 4, src: settingsIcon },
+    { id: 1, src: houseIcon, path: "/projects" },
+    { id: 2, src: pieChartIcon, path: "/stats" },
+    { id: 3, src: garbageIcon, path: "/deleted" },
+    { id: 4, src: settingsIcon, path: "/settings" },
     { id: 5, src: logoutIcon },
   ]);
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectSearch = () => {
+const ProjectList = () => {
   return (
     <div>
       <p>.</p>
@@ -8,4 +8,4 @@ const ProjectSearch = () => {
   );
 };
 
-export default ProjectSearch;
+export default ProjectList;

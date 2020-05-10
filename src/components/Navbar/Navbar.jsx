@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 const Navbar = ({ icons }) => {
@@ -21,7 +21,9 @@ const Navbar = ({ icons }) => {
         {first.map((el) => {
           return (
             <div key={el.id} className={styles.iconWrapper}>
-              <img src={el.src} className={styles.icon}></img>{" "}
+              <Link to={el.path}>
+                <img src={el.src} className={styles.icon}></img>{" "}
+              </Link>
             </div>
           );
         })}
@@ -30,7 +32,9 @@ const Navbar = ({ icons }) => {
         {second.map((el) => {
           return (
             <div key={el.id} className={styles.iconWrapper}>
-              <img src={el.src} className={styles.icon}></img>{" "}
+              <Link to={el.path}>
+                <img src={el.src} className={styles.icon}></img>{" "}
+              </Link>
             </div>
           );
         })}
