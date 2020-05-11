@@ -8,3 +8,18 @@
   justify-content: space-evenly;
   background-color: #f8f8f8;
 }
+
+.wrapper .searchWrapper {
+  position: relative;
+  height: 10%;
+  width: 100%;
+}
+
+.wrapper .listWrapper {
+  position: relative;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

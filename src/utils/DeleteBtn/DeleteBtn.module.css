@@ -1,0 +1,16 @@
+.wrapper {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 41px;
+  background: #ffffff;
+  box-shadow: 5px 5px 10px #bababa, -5px -5px 10px #ffffff;
+  cursor: pointer;
+}
+
+.icon {
+  height: 23px;
+  width: 23px;
+}

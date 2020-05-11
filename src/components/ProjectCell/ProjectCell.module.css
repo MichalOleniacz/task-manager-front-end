@@ -1,0 +1,99 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  border-radius: 40px;
+  background: #ffffff;
+  box-shadow: 22px 22px 44px #d1d1d1, -22px -22px 44px #ffffff;
+}
+
+.wrapper .titleWrapper {
+  position: relative;
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .titleWrapper .titleInnerWrapper {
+  position: relative;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.wrapper .titleWrapper .titleInnerWrapper .iconWrapper {
+  position: relative;
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .contentWrapper {
+  position: relative;
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.wrapper .contentWrapper .description {
+  position: relative;
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.wrapper .bottomWrapper {
+  position: relative;
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper .bottomWrapper .usersWrapper {
+  position: relative;
+  height: 80%;
+  width: 50%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.wrapper .bottomWrapper .btnWrapper {
+  position: relative;
+  height: 80%;
+  width: 40%;
+  margin-right: 5px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.imageWrapper {
+  position: relative;
+  height: 80%;
+  width: 20%;
+}

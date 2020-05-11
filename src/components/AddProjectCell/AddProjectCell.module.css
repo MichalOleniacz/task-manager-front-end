@@ -1,0 +1,32 @@
+.wrapper {
+  position: relative;
+  height: 96%;
+  width: 97%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  border-radius: 40px;
+  border: dashed 7px #707070;
+  /* background: radial-gradient(#f8f8f8, #d1d1d1);
+  box-shadow: 22px 22px 44px #d1d1d1, -22px -22px 44px #d1d1d1,
+    inset 22px 22px 44px #d1d1d1, inset -22px -22px 44px #d1d1d1; */
+}
+
+.wrapper .iconWrapper {
+  position: relative;
+  height: 30%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .iconWrapper img {
+  height: 50px;
+  width: 50px;
+}

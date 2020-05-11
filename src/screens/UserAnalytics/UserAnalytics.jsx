@@ -94,7 +94,7 @@ const UserAnalytics = () => {
           />
         </div>
         <div className={styles.tableWrapper}>
-          <Table projects={userData.projects} />
+          {/* <Table projects={userData.projects} /> */}
         </div>
       </div>
     </div>
