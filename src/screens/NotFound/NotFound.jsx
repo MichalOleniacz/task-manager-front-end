@@ -1,42 +1,28 @@
 import React, { useState } from "react";
 
-import styles from "./NotFound.module.css";
+import { Link } from "react-router-dom";
 
-// Icons
-import addIcon from "../../assets/icons/svg/add.svg";
-import garbageIcon from "../../assets/icons/svg/garbage.svg";
-import heartIcon from "../../assets/icons/svg/heart.svg";
-import houseIcon from "../../assets/icons/svg/house.svg";
-import pieChartIcon from "../../assets/icons/svg/pie-chart.svg";
-import searchIcon from "../../assets/icons/svg/search.svg";
-import settingsIcon from "../../assets/icons/svg/settings.svg";
-import shareIcon from "../../assets/icons/svg/share.svg";
-import logoutIcon from "../../assets/icons/svg/logout.svg";
+import styles from "./NotFound.module.css";
 
 // Components
 import Navbar from "../../components/Navbar/Navbar";
 
-const NotFound = () => {
-  const [icons, setIcons] = useState([
-    { id: 1, src: houseIcon, path: "/projects" },
-    { id: 2, src: pieChartIcon, path: "/stats" },
-    { id: 3, src: garbageIcon, path: "/deleted" },
-    { id: 4, src: settingsIcon, path: "/settings" },
-    { id: 5, src: logoutIcon },
-  ]);
+import Lost from "../../assets/background/lost.svg";
 
+const NotFound = () => {
   const [pageName, setPageName] = useState("Not Found");
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.navbarWrapper}>
-        <Navbar icons={icons} />
+      <div className={styles.imageWrapper}>
+        <img src={Lost} alt="lost" />
       </div>
-      <div className={styles.innerWrapper}>
-        <div className={styles.tableWrapper}>
-          <div className={styles.imageWrapper}></div>
-          <p>It seems that you got lost.</p>
-        </div>
+      <div className={styles.textWrapper}>
+        <h2>Seems like you've got lost.</h2>
+
+        <Link to="/">
+          <h2>Let's go home</h2>
+        </Link>
       </div>
     </div>
   );
