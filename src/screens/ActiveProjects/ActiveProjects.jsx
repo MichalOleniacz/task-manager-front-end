@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import styles from "./ActiveProjects.module.css";
 
 // Icons
-
 import addIcon from "../../assets/icons/svg/add.svg";
 import garbageIcon from "../../assets/icons/svg/garbage.svg";
 import heartIcon from "../../assets/icons/svg/heart.svg";

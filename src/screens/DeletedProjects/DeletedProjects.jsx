@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import styles from "./UserAnalytics.module.css";
+import styles from "./DeletedProjects.module.css";
 
 // Icons
 import addIcon from "../../assets/icons/svg/add.svg";
@@ -21,7 +21,7 @@ import Table from "../../components/Table/Table";
 // User Profile
 import UserImage from "../../assets/images/avatar.png";
 
-const UserAnalytics = () => {
+const DeletedProjects = () => {
   const [icons, setIcons] = useState([
     { id: 1, src: houseIcon, path: "/projects" },
     { id: 2, src: pieChartIcon, path: "/stats" },
@@ -30,7 +30,7 @@ const UserAnalytics = () => {
     { id: 5, src: logoutIcon },
   ]);
 
-  const [pageName, setPageName] = useState("User Analytics");
+  const [pageName, setPageName] = useState("Deleted Projects");
   const [userData, setUserData] = useState({
     name: "Michal",
     projects: [
@@ -101,4 +101,4 @@ const UserAnalytics = () => {
   );
 };
 
-export default UserAnalytics;
+export default DeletedProjects;
