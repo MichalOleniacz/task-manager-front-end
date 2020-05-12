@@ -10,7 +10,7 @@
 
   border-radius: 40px;
   background: #ffffff;
-  box-shadow: 22px 22px 44px #d1d1d1, -22px -22px 44px #ffffff;
+  box-shadow: 27px 27px 60px #d1d1d1, -27px -27px 60px #f3f3f3;
 }
 
 .wrapper .titleWrapper {
@@ -24,12 +24,13 @@
 
 .wrapper .titleWrapper .titleInnerWrapper {
   position: relative;
-  height: 100%;
+  height: 80%;
   width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  border-bottom: 2px solid #f8f8f8;
 }
 
 .wrapper .titleWrapper .titleInnerWrapper .iconWrapper {

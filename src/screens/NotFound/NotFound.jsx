@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Link } from "react-router-dom";
 
 import styles from "./NotFound.module.css";
-
-// Components
-import Navbar from "../../components/Navbar/Navbar";
-
 import Lost from "../../assets/background/lost.svg";
 
 const NotFound = () => {
-  const [pageName, setPageName] = useState("Not Found");
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.imageWrapper}>

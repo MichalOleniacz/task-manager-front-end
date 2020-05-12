@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #f8f8f8;
+  background: linear-gradient(to top, #f3f3f3, #f8f8f8);
 }
 
 .wrapper .searchWrapper {

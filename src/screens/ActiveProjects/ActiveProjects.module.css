@@ -11,13 +11,13 @@
 .navbarWrapper {
   position: relative;
   height: 100vh;
-  width: 4vw;
+  width: 5vw;
 }
 
 .innerWrapper {
   position: relative;
   height: 100vh;
-  width: 96vw;
+  width: 95vw;
   display: flex;
   flex-direction: column;
   align-items: center;

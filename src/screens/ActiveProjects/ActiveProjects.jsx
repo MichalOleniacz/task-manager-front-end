@@ -102,7 +102,7 @@ const ActiveProjects = () => {
       {
         title: "test8",
         description: "lorem",
-        id: 8,
+        id: 7,
         status: 0,
         shared: [],
         IsLiked: false,

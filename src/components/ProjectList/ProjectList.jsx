@@ -4,6 +4,7 @@ import ProjectCell from "../ProjectCell/ProjectCell";
 
 import styles from "./ProjectList.module.css";
 import AddProjectCell from "../AddProjectCell/AddProjectCell";
+import { Link } from "react-router-dom";
 
 const ProjectList = ({ projects }) => {
   console.log(projects);
@@ -12,7 +13,9 @@ const ProjectList = ({ projects }) => {
       {projects.map((el) => {
         return (
           <div className={styles.cellWrapper} key={el.id}>
-            <ProjectCell project={el} />
+            <Link to={`/projects/${el.id}`}>
+              <ProjectCell project={el} />
+            </Link>
           </div>
         );
       })}

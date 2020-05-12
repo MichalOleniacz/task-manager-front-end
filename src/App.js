@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import ProjectDetails from "./screens/ProjectDetails/ProjectDetails";
 import ActiveProjects from "./screens/ActiveProjects/ActiveProjects";
 import UserAnalytics from "./screens/UserAnalytics/UserAnalytics";
 import DeletedProjects from "./screens/DeletedProjects/DeletedProjects";
@@ -12,6 +13,8 @@ function App() {
   return (
     <React.Fragment>
       <Switch>
+        {/* <Route path="/projects/:id" render={(props) => <ProjectDetails project={project} id={project.id} {...props}/>} /> */}
+        <Route path="/projects/:id" component={ProjectDetails} />
         <Route path="/projects" component={ActiveProjects} />
         <Route path="/stats" component={UserAnalytics} />
         <Route path="/deleted" component={DeletedProjects} />
