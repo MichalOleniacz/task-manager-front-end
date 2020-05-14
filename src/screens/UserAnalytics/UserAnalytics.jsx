@@ -29,6 +29,11 @@ const UserAnalytics = () => {
   const [pageName, setPageName] = useState("User Analytics");
   const [userData, setUserData] = useState({
     name: "Michal",
+    reminders: [
+      { id: 1, title: "Upload Vidly to GitHub" },
+      { id: 2, title: "Meeting w/ Martin @14:30" },
+      { id: 3, title: "Change setState func in Vidly" },
+    ],
     activity: [
       { date: new Date(2020, 1, 5), changes: 5 },
       { date: new Date(2020, 2, 5), changes: 6 },
@@ -51,13 +56,14 @@ const UserAnalytics = () => {
         description: "lorem",
         id: 1,
         daysSinceUpdate: 3,
-        status: 1,
+        status: "Finished",
         IsLiked: false,
         shared: [123, 123, 123],
         tasks: [
           {
             id: 1,
-            name: "Vidly",
+            idParent: 1,
+            title: "Vidly",
             status: "inProgress",
             steps: [
               {
@@ -79,7 +85,8 @@ const UserAnalytics = () => {
           },
           {
             id: 2,
-            name: "Vidly2",
+            idParent: 1,
+            title: "Vidly2",
             status: "inProgress",
             steps: [
               {
@@ -105,14 +112,15 @@ const UserAnalytics = () => {
         title: "test2",
         description: "lorem",
         id: 2,
-        status: 1,
+        status: "Finished",
         daysSinceUpdate: 3,
         IsLiked: false,
         shared: [123, 123, 123],
         tasks: [
           {
-            id: 1,
-            name: "Vidly",
+            id: 3,
+            idParent: 2,
+            title: "Vidly",
             status: "inProgress",
             steps: [
               {
@@ -133,8 +141,9 @@ const UserAnalytics = () => {
             ],
           },
           {
-            id: 2,
-            name: "Vidly2",
+            id: 4,
+            idParent: 2,
+            title: "Vidly2",
             status: "inProgress",
             steps: [
               {
@@ -161,13 +170,14 @@ const UserAnalytics = () => {
         description: "lorem",
         daysSinceUpdate: 3,
         id: 3,
-        status: 0,
+        status: "inProgress",
         IsLiked: false,
         shared: [123, 123, 123, 123],
         tasks: [
           {
-            id: 1,
-            name: "Vidly",
+            id: 5,
+            idParent: 3,
+            title: "Vidly",
             status: "inProgress",
             steps: [
               {
@@ -195,12 +205,13 @@ const UserAnalytics = () => {
         daysSinceUpdate: 2,
         shared: [123, 123],
         id: 4,
-        status: 0,
+        status: "Finished",
         IsLiked: false,
         tasks: [
           {
-            id: 1,
-            name: "Vidly",
+            id: 6,
+            idParent: 4,
+            title: "Vidly",
             status: "inProgress",
             steps: [
               {
@@ -221,8 +232,9 @@ const UserAnalytics = () => {
             ],
           },
           {
-            id: 2,
-            name: "Vidly2",
+            id: 7,
+            idParent: 4,
+            title: "Vidly2",
             status: "inProgress",
             steps: [
               {
@@ -240,7 +252,7 @@ const UserAnalytics = () => {
         daysSinceUpdate: 6,
         shared: [123],
         id: 5,
-        status: 2,
+        status: "behindSchedule",
         IsLiked: false,
         tasks: [],
       },
@@ -248,31 +260,34 @@ const UserAnalytics = () => {
         title: "test6",
         description: "lorem",
         id: 6,
-        status: 2,
+        status: "behindSchedule",
         shared: [],
         IsLiked: false,
+        tasks: [],
       },
       {
         title: "test7",
         description: "lorem",
         daysSinceUpdate: 1,
         id: 7,
-        status: 0,
+        status: "Finished",
         shared: [],
         IsLiked: false,
+        tasks: [],
       },
       {
         title: "test8",
         description: "lorem",
         id: 8,
-        status: 0,
+        status: "Finished",
         shared: [],
         IsLiked: false,
         daysSinceUpdate: 2,
         tasks: [
           {
-            id: 1,
-            name: "Vidly",
+            id: 8,
+            idParent: 8,
+            title: "Vidly",
             status: "inProgress",
             steps: [
               {
@@ -293,8 +308,9 @@ const UserAnalytics = () => {
             ],
           },
           {
-            id: 2,
-            name: "Vidly2",
+            id: 9,
+            idParent: 8,
+            title: "Vidly2",
             status: "inProgress",
             steps: [
               {
@@ -317,13 +333,14 @@ const UserAnalytics = () => {
         ],
       },
       {
-        title: "test8",
+        title: "test9",
         description: "lorem",
         daysSinceUpdate: 3,
         id: 9,
-        status: 0,
+        status: "Finished",
         shared: [],
         IsLiked: false,
+        tasks: [],
       },
     ],
     image: UserImage,
