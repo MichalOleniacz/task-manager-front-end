@@ -20,6 +20,7 @@ import Table from "../../components/Table/Table";
 
 // User Profile
 import UserImage from "../../assets/images/avatar.png";
+import StatsTable from "../../components/StatsTable/StatsTable";
 
 const UserAnalytics = () => {
   const [icons, setIcons] = useState([
@@ -33,6 +34,22 @@ const UserAnalytics = () => {
   const [pageName, setPageName] = useState("User Analytics");
   const [userData, setUserData] = useState({
     name: "Michal",
+    activity: [
+      { date: new Date(2020, 1, 5), changes: 5 },
+      { date: new Date(2020, 2, 5), changes: 6 },
+      { date: new Date(2020, 3, 5), changes: 3 },
+      { date: new Date(2020, 4, 5), changes: 0 },
+      { date: new Date(2020, 5, 5), changes: 1 },
+      { date: new Date(2020, 6, 5), changes: 0 },
+      { date: new Date(2020, 7, 5), changes: 3 },
+      { date: new Date(2020, 8, 5), changes: 4 },
+      { date: new Date(2020, 9, 5), changes: 2 },
+      { date: new Date(2020, 10, 5), changes: 0 },
+      { date: new Date(2020, 11, 5), changes: 4 },
+      { date: new Date(2020, 12, 5), changes: 5 },
+      { date: new Date(2020, 13, 5), changes: 2 },
+      { date: new Date(2020, 14, 5), changes: 1 },
+    ],
     projects: [
       {
         projName: "test1",
@@ -40,6 +57,50 @@ const UserAnalytics = () => {
         projID: 1,
         status: "Finished",
         IsLiked: false,
+        tasks: [
+          {
+            id: 1,
+            name: "Vidly",
+            status: "inProgress",
+            steps: [
+              {
+                id: 1,
+                name: "Upload to GitHub",
+                status: "Finished",
+              },
+              {
+                id: 2,
+                name: "Add deleted projects screen",
+                status: "inProgress",
+              },
+              {
+                id: 3,
+                name: "Set up Heroku",
+                status: "Finished",
+              },
+            ],
+            id: 2,
+            name: "Vidly2",
+            status: "inProgress",
+            steps: [
+              {
+                id: 1,
+                name: "Upload to GitHub",
+                status: "Finished",
+              },
+              {
+                id: 2,
+                name: "Add deleted projects screen",
+                status: "inProgress",
+              },
+              {
+                id: 3,
+                name: "Set up Heroku",
+                status: "Finished",
+              },
+            ],
+          },
+        ],
       },
       {
         projName: "test2",
@@ -47,6 +108,50 @@ const UserAnalytics = () => {
         projID: 2,
         status: "In progress",
         IsLiked: true,
+        tasks: [
+          {
+            id: 1,
+            name: "Vidly",
+            status: "inProgress",
+            steps: [
+              {
+                id: 1,
+                name: "Upload to GitHub",
+                status: "Finished",
+              },
+              {
+                id: 2,
+                name: "Add deleted projects screen",
+                status: "inProgress",
+              },
+              {
+                id: 3,
+                name: "Set up Heroku",
+                status: "Finished",
+              },
+            ],
+            id: 2,
+            name: "Vidly2",
+            status: "inProgress",
+            steps: [
+              {
+                id: 1,
+                name: "Upload to GitHub",
+                status: "Finished",
+              },
+              {
+                id: 2,
+                name: "Add deleted projects screen",
+                status: "inProgress",
+              },
+              {
+                id: 3,
+                name: "Set up Heroku",
+                status: "Finished",
+              },
+            ],
+          },
+        ],
       },
       {
         projName: "test3",
@@ -54,6 +159,50 @@ const UserAnalytics = () => {
         projID: 3,
         status: "Behind Schedule",
         IsLiked: false,
+        tasks: [
+          {
+            id: 1,
+            name: "Vidly",
+            status: "inProgress",
+            steps: [
+              {
+                id: 1,
+                name: "Upload to GitHub",
+                status: "Finished",
+              },
+              {
+                id: 2,
+                name: "Add deleted projects screen",
+                status: "inProgress",
+              },
+              {
+                id: 3,
+                name: "Set up Heroku",
+                status: "Finished",
+              },
+            ],
+            id: 2,
+            name: "Vidly2",
+            status: "inProgress",
+            steps: [
+              {
+                id: 1,
+                name: "Upload to GitHub",
+                status: "Finished",
+              },
+              {
+                id: 2,
+                name: "Add deleted projects screen",
+                status: "inProgress",
+              },
+              {
+                id: 3,
+                name: "Set up Heroku",
+                status: "Finished",
+              },
+            ],
+          },
+        ],
       },
       {
         projName: "test4",
@@ -61,6 +210,50 @@ const UserAnalytics = () => {
         projID: 4,
         status: "Finished",
         IsLiked: false,
+        tasks: [
+          {
+            id: 1,
+            name: "Vidly",
+            status: "inProgress",
+            steps: [
+              {
+                id: 1,
+                name: "Upload to GitHub",
+                status: "Finished",
+              },
+              {
+                id: 2,
+                name: "Add deleted projects screen",
+                status: "inProgress",
+              },
+              {
+                id: 3,
+                name: "Set up Heroku",
+                status: "Finished",
+              },
+            ],
+            id: 2,
+            name: "Vidly2",
+            status: "inProgress",
+            steps: [
+              {
+                id: 1,
+                name: "Upload to GitHub",
+                status: "Finished",
+              },
+              {
+                id: 2,
+                name: "Add deleted projects screen",
+                status: "inProgress",
+              },
+              {
+                id: 3,
+                name: "Set up Heroku",
+                status: "Finished",
+              },
+            ],
+          },
+        ],
       },
       {
         projName: "test5",
@@ -68,6 +261,34 @@ const UserAnalytics = () => {
         projID: 5,
         status: "Finished",
         IsLiked: true,
+        tasks: [
+          {
+            id: 1,
+            name: "Vidly",
+            status: "inProgress",
+            steps: [
+              {
+                id: 1,
+                name: "Upload to GitHub",
+                status: "Finished",
+              },
+              {
+                id: 2,
+                name: "Add deleted projects screen",
+                status: "inProgress",
+              },
+              {
+                id: 3,
+                name: "Set up Heroku",
+                status: "Finished",
+              },
+            ],
+            id: 2,
+            name: "Vidly2",
+            status: "inProgress",
+            steps: [],
+          },
+        ],
       },
       {
         projName: "test6",
@@ -75,6 +296,7 @@ const UserAnalytics = () => {
         projID: 6,
         status: "Finished",
         IsLiked: false,
+        tasks: [],
       },
     ],
     image: UserImage,
@@ -94,7 +316,7 @@ const UserAnalytics = () => {
           />
         </div>
         <div className={styles.tableWrapper}>
-          {/* <Table projects={userData.projects} /> */}
+          <StatsTable userData={userData} />
         </div>
       </div>
     </div>
