@@ -18,7 +18,7 @@ const StatsTable = ({ userData }) => {
               <ActivityFeed activity={userData.activity} />
             </div>
             <div className={styles.cellWrapper}>
-              <RecentChanges />
+              <RecentChanges projects={userData.projects} />
             </div>
           </div>
           <div className={styles.latestTasksWrapper}>

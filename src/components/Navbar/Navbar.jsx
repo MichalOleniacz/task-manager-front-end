@@ -22,7 +22,7 @@ const Navbar = ({ icons }) => {
           return (
             <div key={el.id} className={styles.iconWrapper}>
               <Link to={el.path}>
-                <img src={el.src} className={styles.icon}></img>{" "}
+                <img src={el.src} className={styles.icon} alt={el.path}></img>{" "}
               </Link>
             </div>
           );
@@ -32,8 +32,8 @@ const Navbar = ({ icons }) => {
         {second.map((el) => {
           return (
             <div key={el.id} className={styles.iconWrapper}>
-              <Link to={el.path}>
-                <img src={el.src} className={styles.icon}></img>{" "}
+              <Link to={`${el.path}`}>
+                <img src={el.src} className={styles.icon} alt={el.path}></img>{" "}
               </Link>
             </div>
           );

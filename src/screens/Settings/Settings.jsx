@@ -3,20 +3,18 @@ import React, { useState } from "react";
 import styles from "./Settings.module.css";
 
 // Icons
-import addIcon from "../../assets/icons/svg/add.svg";
 import garbageIcon from "../../assets/icons/svg/garbage.svg";
-import heartIcon from "../../assets/icons/svg/heart.svg";
+
 import houseIcon from "../../assets/icons/svg/house.svg";
 import pieChartIcon from "../../assets/icons/svg/pie-chart.svg";
-import searchIcon from "../../assets/icons/svg/search.svg";
+
 import settingsIcon from "../../assets/icons/svg/settings.svg";
-import shareIcon from "../../assets/icons/svg/share.svg";
+
 import logoutIcon from "../../assets/icons/svg/logout.svg";
 
 // Components
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
-import Table from "../../components/Table/Table";
 
 // User Profile
 import UserImage from "../../assets/images/avatar.png";

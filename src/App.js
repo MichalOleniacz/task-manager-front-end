@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import ProjectDetails from "./screens/ProjectDetails/ProjectDetails";
 import ActiveProjects from "./screens/ActiveProjects/ActiveProjects";
 import UserAnalytics from "./screens/UserAnalytics/UserAnalytics";
 import DeletedProjects from "./screens/DeletedProjects/DeletedProjects";
 import Settings from "./screens/Settings/Settings";
 import NotFound from "./screens/NotFound/NotFound";
-import logo from "./logo.svg";
+
 import "./App.css";
 
 function App() {

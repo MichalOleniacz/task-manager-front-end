@@ -7,7 +7,7 @@ import styles from "./ShareBtn.module.css";
 const ShareBtn = () => {
   return (
     <div className={styles.wrapper}>
-      <img src={ShareIcon} className={styles.icon} />
+      <img src={ShareIcon} className={styles.icon} alt="ShareIcon" />
     </div>
   );
 };

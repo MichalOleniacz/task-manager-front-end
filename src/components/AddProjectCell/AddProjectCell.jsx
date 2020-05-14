@@ -8,7 +8,7 @@ const AddProjectCell = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.iconWrapper}>
-        <img src={PlusIcon} />
+        <img src={PlusIcon} alt="PlusIcon" />
       </div>
       <h3>Start a new project!</h3>
     </div>

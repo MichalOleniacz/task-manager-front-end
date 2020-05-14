@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./RecentChanges.module.css";
 
-const RecentChanges = () => {
+const RecentChanges = ({ projects }) => {
   return (
     <div className={styles.wrapper}>
       <p>RecentChanges</p>

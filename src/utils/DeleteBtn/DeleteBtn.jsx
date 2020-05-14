@@ -7,7 +7,7 @@ import styles from "./DeleteBtn.module.css";
 const DeleteBtn = () => {
   return (
     <div className={styles.wrapper}>
-      <img src={GarbageIcon} className={styles.icon} />
+      <img src={GarbageIcon} className={styles.icon} alt="GarbageIcon" />
     </div>
   );
 };

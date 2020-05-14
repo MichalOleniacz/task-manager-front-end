@@ -7,7 +7,7 @@ import styles from "./LikeBtn.module.css";
 const LikeBtn = () => {
   return (
     <div className={styles.wrapper}>
-      <img src={HeartIcon} className={styles.icon} />
+      <img src={HeartIcon} className={styles.icon} alt="LikeIcon" />
     </div>
   );
 };
