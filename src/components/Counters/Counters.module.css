@@ -1,0 +1,60 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.inProgress {
+  border-left: 8px solid #efdc2c;
+  width: 20%;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.finished {
+  border-left: 8px solid #1be579;
+  width: 20%;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.behindSchedule {
+  border-left: 8px solid #ef2c2c;
+  width: 20%;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.toDo {
+  border-left: 8px solid #1baee5;
+  width: 20%;
+  height: 35%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.statusName {
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.value {
+  margin-left: 5px;
+  font-weight: 700;
+  font-size: 18px;
+}

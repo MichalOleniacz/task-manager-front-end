@@ -8,7 +8,7 @@ const RecentChanges = ({ projects, reminders }) => {
     <div className={styles.wrapper}>
       <h3>Recent changes</h3>
       <div className={styles.listWrapper}>
-        <BasicList data={projects} reminders={reminders} type="reminders" />
+        <BasicList data={projects} reminders={reminders} type="tasks" />
       </div>
     </div>
   );

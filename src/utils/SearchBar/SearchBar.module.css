@@ -1,0 +1,41 @@
+.wrapper {
+  height: 60px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 23px;
+  background: #ffffff;
+  box-shadow: 10px 10px 16px #bababa, -10px -10px 16px #ffffff;
+}
+
+.wrapper .inputWrapper {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .inputWrapper input {
+  position: relative;
+  height: 90%;
+  width: 90%;
+  border: none;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.wrapper .imgWrapper {
+  position: relative;
+  width: 17%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  height: 33px;
+  width: 33px;
+}

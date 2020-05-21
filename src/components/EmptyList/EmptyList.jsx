@@ -1,9 +1,9 @@
 import React from "react";
 
-const EmptyList = () => {
+const EmptyList = ({ displayed }) => {
   return (
     <div>
-      <h2>Hey!</h2>
+      <h2>{displayed}</h2>
     </div>
   );
 };

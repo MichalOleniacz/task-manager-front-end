@@ -2,7 +2,7 @@ import React from "react";
 
 import DeleteBtn from "../../utils/DeleteBtn/DeleteBtn";
 import ShareBtn from "../../utils/ShareBtn/ShareBtn";
-import LikeBtn from "../../utils/LikeBtn/LikeBtn";
+import PrioritizeBtn from "../../utils/PrioritizeBtn/PrioritizeBtn";
 
 import getStatusIcon from "../../utilFunc/getStatusIcon";
 
@@ -36,7 +36,7 @@ const ProjectCell = ({ project }) => {
         <div className={styles.btnWrapper}>
           <DeleteBtn />
           <ShareBtn />
-          <LikeBtn />
+          <PrioritizeBtn priority={project.isPrioritized} />
         </div>
       </div>
     </div>
