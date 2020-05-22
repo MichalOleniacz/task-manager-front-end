@@ -58,7 +58,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: 8px 8px 16px #bababa, -8px -8px 16px #ffffff;
+  box-shadow: 8px 8px 16px #bababa, -8px -8px 16px #ffffff; 
 }
 
 .wrapper:hover .dropdownBtn {

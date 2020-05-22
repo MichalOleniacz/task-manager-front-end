@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./RecentChanges.module.css";
-import BasicList from "../BasicList/BasicList";
+import BasicList from "../../utils/BasicList/BasicList";
 
 const RecentChanges = ({ projects, reminders }) => {
   return (

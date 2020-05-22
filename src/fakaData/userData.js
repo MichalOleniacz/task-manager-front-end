@@ -30,7 +30,7 @@ let data = {
       id: 1,
       isPrioritized: true,
       daysSinceUpdate: 3,
-      status: "Finished",
+      status: "inProgress",
       IsLiked: false,
       shared: [123, 123, 123],
       tasks: [
@@ -123,7 +123,7 @@ let data = {
           idParent: 2,
           title: "Vidly2",
           isPrioritized: true,
-          status: "inProgress",
+          status: "behindSchedule",
           steps: [
             {
               id: 1,
@@ -159,7 +159,7 @@ let data = {
           idParent: 3,
           isPrioritized: false,
           title: "Vidly",
-          status: "inProgress",
+          status: "toDo",
           steps: [
             {
               id: 1,
@@ -219,7 +219,7 @@ let data = {
           idParent: 4,
           title: "Vidly2",
           isPrioritized: true,
-          status: "inProgress",
+          status: "toDo",
           steps: [
             {
               id: 1,
@@ -276,7 +276,7 @@ let data = {
           id: 8,
           idParent: 8,
           title: "Vidly",
-          status: "inProgress",
+          status: "Finished",
           steps: [
             {
               id: 1,
@@ -326,7 +326,7 @@ let data = {
       isPrioritized: true,
       daysSinceUpdate: 3,
       id: 9,
-      status: "Finished",
+      status: "inProgress",
       shared: [],
       IsLiked: false,
       tasks: [],

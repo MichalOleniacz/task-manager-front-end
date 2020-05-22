@@ -45,7 +45,7 @@
 .wrapper .leftWrapper .leftTopWrapper .cellWrapper {
   position: relative;
   height: 100%;
-  width: 45%;
+  width: 46.5%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,5 +120,5 @@
   justify-content: space-evenly;
   border-radius: 40px;
   background: #ffffff;
-  box-shadow: 27px 27px 60px #d1d1d1, -27px -27px 60px #f3f3f3;
+  box-shadow: 25px 25px 42px #d1d1d1, -25px -25px 42px #f3f3f3;
 }

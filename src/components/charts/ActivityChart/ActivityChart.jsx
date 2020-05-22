@@ -13,6 +13,9 @@ const ActivityChart = ({ activity }) => {
     return { values: output, sort: sort[0] };
   };
 
+  // #1D976C dark
+  // #93F9B9
+
   //   const getLabels = (activity) => {
   //     let output = [];
   //     let current;
@@ -29,8 +32,9 @@ const ActivityChart = ({ activity }) => {
     const setGradient = (ctx) => {
       const gradient = ctx.createLinearGradient(0, 350, 0, 0);
 
-      gradient.addColorStop(0, "rgba(239, 220, 44, 0)");
-      gradient.addColorStop(0.1, "rgba(239, 220, 44, 0.05)");
+      gradient.addColorStop(0, "rgba(147, 249, 184, 0)");
+      gradient.addColorStop(0.1, "rgba(147, 249, 184, 0.05)");
+      gradient.addColorStop(0.5, "rgba(27, 229, 121,0.8)");
       gradient.addColorStop(0.8, "rgba(27, 229, 121,1)");
       return gradient;
     };

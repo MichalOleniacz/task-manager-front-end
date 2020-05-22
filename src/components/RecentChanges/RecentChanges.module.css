@@ -6,6 +6,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  border-radius: 40px;
+}
+
+.wrapper:hover {
+  transition: ease-in-out 0.5s;
+  background: #ffffff;
+  box-shadow: 10px 10px 15px #d1d1d1, -10px -10px 15px #f3f3f3;
 }
 
 .listWrapper {

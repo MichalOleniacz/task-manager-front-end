@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./StatsTable.module.css";
 import ActivityFeed from "../ActivityFeed/ActivityFeed";
 import RecentChanges from "../RecentChanges/RecentChanges";
-import LatestTasks from "../LatestTasks/LatestTasks";
+import Priorities from "../Priorities/Priorities";
 import StatsPieChart from "../StatsPieChart/StatsPieChart";
 import Reminders from "../Reminders/Reminders";
 import ListByStatus from "../ListByStatus/ListByStatus";
@@ -25,29 +25,32 @@ const StatsTable = ({ userData }) => {
             </div>
           </div>
           <div className={styles.latestTasksWrapper}>
-            <LatestTasks />
+            <Priorities projects={userData.projects} />
           </div>
         </div>
         <div className={styles.middleWrapper}>
           <div className={styles.chartWrapper}>
-            <StatsPieChart />
+            <StatsPieChart projects={userData.projects} />
           </div>
           <div className={styles.remindersWrapper}>
-            <Reminders />
+            <Reminders reminders={userData.reminders} />
           </div>
         </div>
         <div className={styles.rightWrapper}>
           <div className={styles.listByStatusWrapper}>
-            <ListByStatus />
+            <ListByStatus status="inProgress" projects={userData.projects} />
           </div>
           <div className={styles.listByStatusWrapper}>
-            <ListByStatus />
+            <ListByStatus
+              status="behindSchedule"
+              projects={userData.projects}
+            />
           </div>
           <div className={styles.listByStatusWrapper}>
-            <ListByStatus />
+            <ListByStatus status="toDo" projects={userData.projects} />
           </div>
           <div className={styles.listByStatusWrapper}>
-            <ListByStatus />
+            <ListByStatus status="Finished" projects={userData.projects} />
           </div>
         </div>
       </div>

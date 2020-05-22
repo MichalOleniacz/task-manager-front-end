@@ -20,24 +20,23 @@
   flex-direction: column;
   align-items: center;
   list-style-type: none;
-  justify-content: center;
-  margin-top: 4vh;
+  justify-content: flex-start;
+  /* margin-top: 4vh; */
 }
 
 .link {
   position: relative;
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .list .cell {
   position: relative;
-  width: 80%;
-  height: 4vh;
+  width: 90%;
+  height: 40px;
   border-bottom: 1px solid #f8f8f8;
   display: flex;
   flex-direction: row;
@@ -70,4 +69,17 @@
 .icon {
   height: 17px;
   width: 17px;
+}
+
+.iconWrapper {
+  position: relative;
+  width: 12%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.iconWrapper h5 {
+  margin-right: 10px;
 }
