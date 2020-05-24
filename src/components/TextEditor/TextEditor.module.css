@@ -1,0 +1,122 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.editorWrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.innerEditor {
+  height: 90%;
+  width: 80%;
+  overflow-y: scroll;
+}
+
+.styleControlsWrapper {
+  height: 100px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+
+.blockControlsWrapper {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.inlineStyleWrapper {
+  border-top: #707070 1px solid;
+  position: relative;
+  height: 35px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.styleButton {
+  cursor: pointer;
+}
+
+.activeButton {
+  position: relative;
+  text-decoration: underline;
+  font-weight: 700;
+  /* height: 100%; */
+  /* border-bottom: 1px solid grey; */
+}
+
+.actionButtonsWrapper {
+  position: relative;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.actionButton {
+  position: relative;
+  height: 40px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+  background: #ffffff;
+  font-size: 12px;
+  box-shadow: 6px 6px 12px #cccccc, -6px -6px 12px #ffffff;
+}
+.saveButton {
+  position: relative;
+  height: 40px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+  background: #1be579;
+  /* background-color: #ffffff; */
+  color: #ffffff;
+  /* color: #1be579; */
+  box-shadow: 6px 6px 12px #cccccc, -6px -6px 12px #ffffff;
+  font-weight: 600;
+}
+
+.cancelButton {
+  position: relative;
+  height: 40px;
+  width: 200px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #ffffff;
+  font-weight: 600;
+  background: #ef2c2c;
+  box-shadow: 6px 6px 12px #cccccc, -6px -6px 12px #ffffff;
+}

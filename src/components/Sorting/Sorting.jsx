@@ -15,10 +15,11 @@ const Sorting = ({
   currentStatus,
   prioritySort,
   projects,
+  showStats,
 }) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.innerWrapper}>
+      <div className={showStats ? styles.innerWrapper : styles.fullWrapper}>
         <SearchBar onSearch={(query) => handleSearch(query)} />
         <AddBtn />
         <PrioritySort
@@ -30,9 +31,12 @@ const Sorting = ({
           onSortByStatus={(status) => handleSortByStatus(status)}
         />
       </div>
-      <div className={styles.infoWrapper}>
-        <Counters projects={projects} />
-      </div>
+
+      {showStats ? (
+        <div className={styles.infoWrapper}>
+          <Counters projects={projects} />
+        </div>
+      ) : null}
     </div>
   );
 };

@@ -7,7 +7,6 @@ import AddProjectCell from "../AddProjectCell/AddProjectCell";
 import { Link } from "react-router-dom";
 
 const ProjectList = ({ projects }) => {
-  console.log(projects);
   return (
     <div className={styles.wrapper}>
       {projects.map((el) => {
@@ -20,7 +19,7 @@ const ProjectList = ({ projects }) => {
         );
       })}
       <div className={styles.cellWrapper}>
-        <AddProjectCell />
+        <AddProjectCell type="project" />
       </div>
     </div>
   );

@@ -24,6 +24,7 @@ const Table = ({
           handlePrioritySort={() => onPrioritySort()}
           prioritySort={prioritySort}
           projects={allProjects}
+          showStats={true}
         />
       </div>
       <div className={styles.listWrapper}>

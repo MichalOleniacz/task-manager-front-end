@@ -53,8 +53,6 @@ const ActiveProjects = () => {
     setCurrentStatus(getStatusIcon("none"));
   };
 
-  const handleSortByPrioritized = (val) => {};
-
   const handleSortByStatus = (status) => {
     let statusIcon = getStatusIcon(status);
     if (status !== "none") {
@@ -105,7 +103,7 @@ const ActiveProjects = () => {
             currentStatus={currentStatus}
             onSearch={(query) => handleSearch(query)}
             onSortByStatus={(status) => handleSortByStatus(status)}
-            onSortByPrioritized={(val) => handleSortByPrioritized(val)}
+            onSortByPrioritized={(val) => handlePrioritySort(val)}
             onPrioritySort={() => handlePrioritySort()}
             prioritySort={prioritySort}
             displayedIfNull={displayedIfNull}

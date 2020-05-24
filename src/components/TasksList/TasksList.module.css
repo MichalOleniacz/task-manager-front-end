@@ -1,0 +1,35 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  position: relative;
+  width: 5px;
+  background-color: none;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #707070;
+  position: relative;
+  border-radius: 10px;
+}
+
+.cellWrapper {
+  position: relative;
+  height: calc(347px / 1.75);
+  width: calc(392px / 1.75);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+}

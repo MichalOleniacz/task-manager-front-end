@@ -40,6 +40,7 @@ let data = {
           title: "Vidly",
           isPrioritized: true,
           status: "inProgress",
+          completion: 100,
           steps: [
             {
               id: 1,
@@ -63,6 +64,7 @@ let data = {
           idParent: 1,
           title: "Vidly2",
           isPrioritized: false,
+          completion: 20,
           status: "inProgress",
           steps: [
             {
@@ -97,6 +99,7 @@ let data = {
         {
           id: 3,
           idParent: 2,
+          completion: 80,
           title: "Vidly",
           isPrioritized: false,
           status: "inProgress",
@@ -123,6 +126,7 @@ let data = {
           idParent: 2,
           title: "Vidly2",
           isPrioritized: true,
+          completion: 0,
           status: "behindSchedule",
           steps: [
             {
@@ -157,6 +161,7 @@ let data = {
         {
           id: 5,
           idParent: 3,
+          completion: 5,
           isPrioritized: false,
           title: "Vidly",
           status: "toDo",
@@ -195,6 +200,7 @@ let data = {
           idParent: 4,
           title: "Vidly",
           isPrioritized: true,
+          completion: 90,
           status: "inProgress",
           steps: [
             {
@@ -219,6 +225,7 @@ let data = {
           idParent: 4,
           title: "Vidly2",
           isPrioritized: true,
+          completion: 0,
           status: "toDo",
           steps: [
             {
@@ -276,6 +283,7 @@ let data = {
           id: 8,
           idParent: 8,
           title: "Vidly",
+          completion: 100,
           status: "Finished",
           steps: [
             {
@@ -300,6 +308,7 @@ let data = {
           idParent: 8,
           title: "Vidly2",
           status: "inProgress",
+          completion: 25,
           steps: [
             {
               id: 1,

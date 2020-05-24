@@ -8,7 +8,10 @@ const SearchBar = ({ onSearch }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.inputWrapper}>
-        <input onChange={(e) => onSearch(e.target.value)} />
+        <input
+          onChange={(e) => onSearch(e.target.value)}
+          placeholder="Search through your work..."
+        />
       </div>
       <div className={styles.imgWrapper}>
         <img src={searchIcon} alt="searchIcon" className={styles.icon} />
