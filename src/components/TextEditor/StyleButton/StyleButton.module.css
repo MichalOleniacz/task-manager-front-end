@@ -1,0 +1,11 @@
+.activeButton {
+  position: relative;
+  text-decoration: underline;
+  font-weight: 700;
+  /* height: 100%; */
+  /* border-bottom: 1px solid grey; */
+}
+
+.styleButton {
+  cursor: pointer;
+}

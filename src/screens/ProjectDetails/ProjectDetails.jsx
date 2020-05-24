@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { EditorState } from "draft-js";
+import { EditorState, convertFromRaw } from "draft-js";
 
 import garbageIcon from "../../assets/icons/svg/garbage.svg";
 
@@ -42,7 +42,11 @@ const ProjectDetails = ({ match }) => {
   const [tasks, setTasks] = useState(currentProject.tasks);
   const [currentStatus, setCurrentStatus] = useState(getStatusIcon("none"));
   const [prioritySort, setPrioritySort] = useState(true);
-  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [editorState, setEditorState] = useState(
+    EditorState.createWithContent(convertFromRaw(currentProject.content))
+  );
+
+  console.log(editorState);
 
   const handleSearch = (query) => {
     let newList = [];
@@ -113,6 +117,7 @@ const ProjectDetails = ({ match }) => {
                   : tasks
               }
               currentStatus={currentStatus}
+              currentProject={currentProject}
               onSearch={(query) => handleSearch(query)}
               onSortByStatus={(status) => handleSortByStatus(status)}
               onSortByPrioritized={(val) => handlePrioritySort(val)}
