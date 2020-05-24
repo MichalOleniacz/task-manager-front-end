@@ -4,6 +4,7 @@ import styles from "./DetailsTable.module.css";
 import Sorting from "../Sorting/Sorting";
 import TasksList from "../TasksList/TasksList";
 import TextEditor from "../TextEditor/TextEditor";
+import EmptyList from "../EmptyList/EmptyList";
 
 const DetailsTable = ({
   tasks,
@@ -42,15 +43,11 @@ const DetailsTable = ({
           />
         </div>
         <div className={styles.listWrapper}></div>
-        <TasksList
-          tasks={tasks}
-          handleSearch={(query) => onSearch(query)}
-          currentStatus={currentStatus}
-          handleSortByStatus={(status) => onSortByStatus(status)}
-          handlePrioritySort={() => onPrioritySort()}
-          prioritySort={prioritySort}
-          projects={allProjects}
-        />
+        {tasks.length > 0 ? (
+          <TasksList tasks={tasks} />
+        ) : (
+          <EmptyList displayed={displayedIfNull} type="task" />
+        )}
       </div>
     </div>
   );

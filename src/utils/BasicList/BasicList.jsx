@@ -38,8 +38,9 @@ const BasicList = ({ data, reminders, type, allProjects }) => {
     } else return data;
   };
 
-  const getParentName = (data, task) => {
+  const getParentName = (task) => {
     let name = data.filter((c) => c.id === task);
+    console.log(name);
     let output = name[0].title;
     return output;
   };
@@ -81,7 +82,6 @@ const BasicList = ({ data, reminders, type, allProjects }) => {
                         <h4>{`${el.title}`}</h4>
                       </Link>
                     )}
-                    {/* <h4>{el.title}</h4> */}
                   </div>
                   <div className={styles.iconWrapper}>
                     {type === "reminders" ? (
@@ -92,7 +92,7 @@ const BasicList = ({ data, reminders, type, allProjects }) => {
                       />
                     ) : null}
                     {type === "tasks" ? (
-                      <h5>{getParentName(data, el.idParent)}</h5>
+                      <h5>{getParentName(el.idParent)}</h5>
                     ) : null}
                     {type === "sortedTasks" || type === "priorityTasks" ? (
                       <h5>{getSortedTasksParent(el.idParent)}</h5>

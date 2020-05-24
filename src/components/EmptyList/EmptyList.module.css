@@ -1,0 +1,19 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cellWrapper {
+  position: relative;
+  height: calc(347px / 1.75);
+  width: calc(392px / 1.75);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 20px;
+  margin-left: 20px;
+}

@@ -50,13 +50,16 @@ const ProjectDetails = ({ match }) => {
 
   const handleSearch = (query) => {
     let newList = [];
-    userData.projects.forEach((project) => {
-      if (project.title.match(query)) newList.push(project);
+    // userData.projects.forEach((project) => {
+    //   if (project.title.match(query)) newList.push(project);
+    // });
+    currentProject.tasks.forEach((task) => {
+      if (task.title.match(query)) newList.push(task);
     });
     if (newList.length === 0) {
-      userData.projects.length === 0
-        ? setDisplayedIfNull(`Seems like you don't have any projects...`)
-        : setDisplayedIfNull(`"${query}" doesn't match any of the projects!`);
+      currentProject.tasks.length === 0
+        ? setDisplayedIfNull(`Seems like you don't have any tasks...`)
+        : setDisplayedIfNull(`"${query}" doesn't match any of the tasks!`);
     }
 
     setTasks(newList);

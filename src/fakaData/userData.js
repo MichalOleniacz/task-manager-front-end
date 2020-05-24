@@ -134,56 +134,56 @@ let data = {
       IsLiked: false,
       shared: [123, 123, 123],
       tasks: [
-        {
-          id: 1,
-          idParent: 1,
-          title: "Vidly",
-          isPrioritized: true,
-          status: "inProgress",
-          completion: 100,
-          steps: [
-            {
-              id: 1,
-              name: "Upload to GitHub",
-              status: "Finished",
-            },
-            {
-              id: 2,
-              name: "Add deleted projects screen",
-              status: "inProgress",
-            },
-            {
-              id: 3,
-              name: "Set up Heroku",
-              status: "Finished",
-            },
-          ],
-        },
-        {
-          id: 2,
-          idParent: 1,
-          title: "Vidly2",
-          isPrioritized: false,
-          completion: 20,
-          status: "inProgress",
-          steps: [
-            {
-              id: 1,
-              name: "Upload to GitHub",
-              status: "Finished",
-            },
-            {
-              id: 2,
-              name: "Add deleted projects screen",
-              status: "inProgress",
-            },
-            {
-              id: 3,
-              name: "Set up Heroku",
-              status: "Finished",
-            },
-          ],
-        },
+        // {
+        //   id: 1,
+        //   idParent: 1,
+        //   title: "Vidly",
+        //   isPrioritized: true,
+        //   status: "inProgress",
+        //   completion: 100,
+        //   steps: [
+        //     {
+        //       id: 1,
+        //       name: "Upload to GitHub",
+        //       status: "Finished",
+        //     },
+        //     {
+        //       id: 2,
+        //       name: "Add deleted projects screen",
+        //       status: "inProgress",
+        //     },
+        //     {
+        //       id: 3,
+        //       name: "Set up Heroku",
+        //       status: "Finished",
+        //     },
+        //   ],
+        // },
+        // {
+        //   id: 2,
+        //   idParent: 1,
+        //   title: "Vidly2",
+        //   isPrioritized: false,
+        //   completion: 20,
+        //   status: "inProgress",
+        //   steps: [
+        //     {
+        //       id: 1,
+        //       name: "Upload to GitHub",
+        //       status: "Finished",
+        //     },
+        //     {
+        //       id: 2,
+        //       name: "Add deleted projects screen",
+        //       status: "inProgress",
+        //     },
+        //     {
+        //       id: 3,
+        //       name: "Set up Heroku",
+        //       status: "Finished",
+        //     },
+        //   ],
+        // },
       ],
     },
     {
