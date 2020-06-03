@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import getStatusIcon from "../../utilFunc/getStatusIcon";
+import getLinkList from "../../utilFunc/getListLink";
 import GarbageIcon from "../../assets/icons/svg/garbage.svg";
 import HeartFullIcon from "../../assets/icons/svg/heartFull.svg";
 import styles from "./BasicList.module.css";
@@ -35,7 +36,8 @@ const BasicList = ({ data, reminders, type, allProjects }) => {
         });
       });
       return tasks;
-    } else return data;
+    } else if (type === "steps") return data.steps;
+    else return data;
   };
 
   const getParentName = (task) => {
@@ -59,7 +61,7 @@ const BasicList = ({ data, reminders, type, allProjects }) => {
             return (
               <div
                 key={el.id}
-                to={`/projects/${el.id}`}
+                // to={`/projects/${el.id}`}
                 className={styles.link}>
                 <li className={styles.cell}>
                   <div
@@ -68,34 +70,39 @@ const BasicList = ({ data, reminders, type, allProjects }) => {
                         ? styles.reminderWrapper
                         : styles.titleWrapper
                     }>
-                    {el.status ? (
+                    {el.status && (
                       <img
                         src={getStatusIcon(el.status)}
                         alt="status"
                         className={styles.icon}
                       />
-                    ) : null}
+                    )}
                     {type === "reminders" ? (
                       <h4>{`${el.title}`}</h4>
-                    ) : (
-                      <Link to={`/projects/${el.id}`}>
+                    ) : type === "steps" ? null : (
+                      <Link to={getLinkList(type, el)}>
+                        {console.log(el)}
                         <h4>{`${el.title}`}</h4>
                       </Link>
                     )}
+                    {type === "steps" && (
+                      <h4 className={styles.stepName}>{el.name}</h4>
+                    )}
                   </div>
                   <div className={styles.iconWrapper}>
-                    {type === "reminders" ? (
-                      <img
-                        src={GarbageIcon}
-                        alt="GarbageIcon"
-                        className={styles.icon}
-                      />
-                    ) : null}
-                    {type === "tasks" ? (
-                      <h5>{getParentName(el.idParent)}</h5>
-                    ) : null}
+                    {type === "reminders" ||
+                      (type === "steps" && (
+                        <img
+                          src={GarbageIcon}
+                          alt="GarbageIcon"
+                          className={styles.icon}
+                        />
+                      ))}
+                    {type === "tasks" && <h5>{getParentName(el.idParent)}</h5>}
                     {type === "sortedTasks" || type === "priorityTasks" ? (
-                      <h5>{getSortedTasksParent(el.idParent)}</h5>
+                      <Link to={getLinkList("tasks", el)}>
+                        <h5>{getSortedTasksParent(el.idParent)}</h5>
+                      </Link>
                     ) : null}
                     {type === "priorityProjects" || type === "priorityTasks" ? (
                       <img

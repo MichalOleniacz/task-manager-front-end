@@ -6,8 +6,8 @@ import AddProjectCell from "../AddProjectCell/AddProjectCell";
 const EmptyList = ({ displayed, type }) => {
   return (
     <div className={styles.wrapper}>
-      <h2>{displayed}</h2>
-      <div className={styles.addProjectCell}>
+      {/* <h4>{displayed}</h4> */}
+      <div className={styles.cellWrapper}>
         <AddProjectCell type={type} />
       </div>
     </div>

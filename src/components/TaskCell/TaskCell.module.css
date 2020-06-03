@@ -13,6 +13,19 @@
   box-shadow: 27px 27px 60px #d1d1d1, -27px -27px 60px #f3f3f3;
 }
 
+.innerWrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  cursor: pointer;
+}
+
 .wrapper .titleWrapper {
   position: relative;
   height: 20%;
@@ -64,10 +77,12 @@
   position: relative;
   height: 25%;
   width: 100%;
+  bottom: 5%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  z-index: 3;
 }
 
 .wrapper .bottomWrapper .usersWrapper {

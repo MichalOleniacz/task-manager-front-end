@@ -4,14 +4,6 @@ import styles from "./ActiveProjects.module.css";
 
 // Icons
 
-import garbageIcon from "../../assets/icons/svg/garbage.svg";
-
-import houseIcon from "../../assets/icons/svg/house.svg";
-import pieChartIcon from "../../assets/icons/svg/pie-chart.svg";
-
-import settingsIcon from "../../assets/icons/svg/settings.svg";
-import logoutIcon from "../../assets/icons/svg/logout.svg";
-
 // Components
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
@@ -23,14 +15,6 @@ import data from "../../fakaData/userData";
 import getStatusIcon from "../../utilFunc/getStatusIcon";
 
 const ActiveProjects = () => {
-  const [icons, setIcons] = useState([
-    { id: 1, src: houseIcon, path: "/projects" },
-    { id: 2, src: pieChartIcon, path: "/stats" },
-    { id: 3, src: garbageIcon, path: "/deleted" },
-    { id: 4, src: settingsIcon, path: "/settings" },
-    { id: 5, src: logoutIcon },
-  ]);
-
   const [pageName, setPageName] = useState("Active Projects");
   const [userData, setUserData] = useState(data);
   const [displayedIfNull, setDisplayedIfNull] = useState("Hey!");
@@ -63,7 +47,9 @@ const ActiveProjects = () => {
       if (sorted.length === 0) {
         userData.projects.length === 0
           ? setDisplayedIfNull(`Seems like you don't have any projects...`)
-          : setDisplayedIfNull(`You have no project with the selected status`);
+          : setDisplayedIfNull(
+              `You have no projects with the selected status!`
+            );
       }
     } else if (status === "none") {
       setProjects(userData.projects);
@@ -83,7 +69,7 @@ const ActiveProjects = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.navbarWrapper}>
-        <Navbar icons={icons} />
+        <Navbar />
       </div>
       <div className={styles.innerWrapper}>
         <div className={styles.headerWrapper}>

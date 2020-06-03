@@ -31,7 +31,10 @@ const Table = ({
         {projects.length > 0 ? (
           <ProjectList projects={projects} />
         ) : (
-          <EmptyList displayed={displayedIfNull} />
+          <div className={styles.emptyListWrapper}>
+            <h2>{displayedIfNull}</h2>
+            <EmptyList displayed={displayedIfNull} type="project" />
+          </div>
         )}
       </div>
     </div>

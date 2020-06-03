@@ -6,6 +6,7 @@ import UserAnalytics from "./screens/UserAnalytics/UserAnalytics";
 import DeletedProjects from "./screens/DeletedProjects/DeletedProjects";
 import Settings from "./screens/Settings/Settings";
 import NotFound from "./screens/NotFound/NotFound";
+import TaskDetails from "./screens/TaskDetails/TaskDetails";
 
 import "./App.css";
 
@@ -13,7 +14,7 @@ function App() {
   return (
     <React.Fragment>
       <Switch>
-        {/* <Route path="/projects/:id" render={(props) => <ProjectDetails project={project} id={project.id} {...props}/>} /> */}
+        <Route path="/projects/:id/:id" component={TaskDetails} />
         <Route path="/projects/:id" component={ProjectDetails} />
         <Route path="/projects" component={ActiveProjects} />
         <Route path="/stats" component={UserAnalytics} />

@@ -103,7 +103,18 @@
   position: fixed;
   top: 90%;
   height: 10%;
-  width: 50%;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.tasksActionButtonsWrapper {
+  position: fixed;
+  top: 55%;
+  height: 10%;
+  width: 30%;
   display: flex;
   flex-direction: row;
   align-items: center;

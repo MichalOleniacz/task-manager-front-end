@@ -4,24 +4,26 @@ import { EditorState, convertFromRaw } from "draft-js";
 // Components
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
+import DetailsTable from "../../components/DetailsTable/DetailsTable";
 
 // User Profile
 import data from "../../fakaData/userData";
 import getStatusIcon from "../../utilFunc/getStatusIcon";
 
-import styles from "./ProjectDetails.module.css";
-import DetailsTable from "../../components/DetailsTable/DetailsTable";
+import getParentProject from "../../utilFunc/getParentProject";
+import getCurrentTaskObject from "../../utilFunc/getCurrentTaskObject";
 
-const ProjectDetails = ({ match }) => {
-  const [project, setProject] = useState(parseInt(match.params.id));
-  console.log(project);
+import styles from "./TaskDetails.module.css";
+
+const TaskDetails = (props) => {
+  const [taskID, setTask] = useState(parseInt(props.match.params.id));
+  const [currentTask, setCurrentTask] = useState(getCurrentTaskObject(taskID));
 
   const [userData, setUserData] = useState(data);
 
-  const [currentProject, setCurrentProject] = useState(() =>
-    userData.projects.find((c) => c.id === parseInt(project))
+  const [currentProject, setCurrentProject] = useState(
+    getParentProject(taskID)
   );
-
   const [pageName, setPageName] = useState(currentProject.title);
   const [displayedIfNull, setDisplayedIfNull] = useState(
     "Seems like this project has no tasks asigned to it, click on the button below to start a new task!"
@@ -32,8 +34,6 @@ const ProjectDetails = ({ match }) => {
   const [editorState, setEditorState] = useState(
     EditorState.createWithContent(convertFromRaw(currentProject.content))
   );
-
-  console.log(editorState);
 
   const handleSearch = (query) => {
     let newList = [];
@@ -85,45 +85,44 @@ const ProjectDetails = ({ match }) => {
   };
 
   return (
-    <div>
-      <div className={styles.wrapper}>
-        <div className={styles.navbarWrapper}>
-          <Navbar />
+    <div className={styles.wrapper}>
+      <div className={styles.navbarWrapper}>
+        <Navbar />
+      </div>
+      <div className={styles.innerWrapper}>
+        <div className={styles.headerWrapper}>
+          <Header
+            userImage={userData.image}
+            userName={userData.name}
+            pageName={pageName}
+          />
         </div>
-        <div className={styles.innerWrapper}>
-          <div className={styles.headerWrapper}>
-            <Header
-              userName={userData.name}
-              userImage={userData.image}
-              pageName={pageName}
-            />
-          </div>
-
-          <div className={styles.tableWrapper}>
-            <DetailsTable
-              screen="project"
-              tasks={
-                prioritySort
-                  ? tasks.sort((b, a) => a.isPrioritized - b.isPrioritized)
-                  : tasks
-              }
-              currentStatus={currentStatus}
-              currentProjectID={project}
-              onSearch={(query) => handleSearch(query)}
-              onSortByStatus={(status) => handleSortByStatus(status)}
-              onSortByPrioritized={(val) => handlePrioritySort(val)}
-              onPrioritySort={() => handlePrioritySort()}
-              prioritySort={prioritySort}
-              displayedIfNull={displayedIfNull}
-              allProjects={userData.projects}
-              editorState={editorState}
-              handleEditorChange={handleEditorChange}
-            />
-          </div>
+        <div className={styles.tableWrapper}>
+          <DetailsTable
+            tasks={
+              prioritySort
+                ? tasks.sort((b, a) => a.isPrioritized - b.isPrioritized)
+                : tasks
+            }
+            currentStatus={currentStatus}
+            currentProjectID={currentProject.id}
+            currentTaskID={taskID}
+            currentTask={currentTask}
+            onSearch={(query) => handleSearch(query)}
+            onSortByStatus={(status) => handleSortByStatus(status)}
+            onSortByPrioritized={(val) => handlePrioritySort(val)}
+            onPrioritySort={() => handlePrioritySort()}
+            prioritySort={prioritySort}
+            displayedIfNull={displayedIfNull}
+            allProjects={userData.projects}
+            editorState={editorState}
+            handleEditorChange={handleEditorChange}
+            screen="task"
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default ProjectDetails;
+export default TaskDetails;

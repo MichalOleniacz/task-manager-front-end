@@ -11,7 +11,7 @@ const Counters = ({ projects }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.inProgress}>
-        <h4 className={styles.statusName}>In Progress:</h4>
+        <h4 className={styles.statusName}>In progress:</h4>
         <h3 className={styles.value}>{getValue("inProgress")}</h3>
       </div>
       <div className={styles.finished}>
@@ -19,7 +19,7 @@ const Counters = ({ projects }) => {
         <h3 className={styles.value}>{getValue("Finished")}</h3>
       </div>
       <div className={styles.behindSchedule}>
-        <h4 className={styles.statusName}>Behind Schedule:</h4>
+        <h4 className={styles.statusName}>Behind schedule:</h4>
         <h3 className={styles.value}>{getValue("behindSchedule")}</h3>
       </div>
       <div className={styles.toDo}>

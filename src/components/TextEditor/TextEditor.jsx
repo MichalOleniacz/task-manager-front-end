@@ -8,7 +8,7 @@ import BlockStyleControls from "./BlockStyleControls/BlockStyleControls";
 import styles from "./TextEditor.module.css";
 import "./style.css";
 
-const TextEditor = ({ mainState, onSave }) => {
+const TextEditor = ({ mainState, onSave, screen }) => {
   const [privateEditorState, setPrivateEditorState] = useState(mainState);
   const [editorState, setEditorState] = useState(privateEditorState);
   const [readOnly, setReadOnly] = useState(true);
@@ -127,29 +127,39 @@ const TextEditor = ({ mainState, onSave }) => {
             customStyleMap={styleMap}
           />
         </div>
-        <div className={styles.actionButtonsWrapper}>
-          {readOnly ? (
+      </div>
+      <div
+        className={
+          screen === "project"
+            ? styles.actionButtonsWrapper
+            : styles.tasksActionButtonsWrapper
+        }>
+        {readOnly ? (
+          <button
+            onClick={() => handleReadOnly(readOnly)}
+            className={styles.actionButton}>
+            Open in Editor mode
+          </button>
+        ) : null}
+        {readOnly ? null : (
+          <div
+            className={
+              screen === "project"
+                ? styles.actionButtonsWrapper
+                : styles.tasksActionButtonsWrapper
+            }>
             <button
-              onClick={() => handleReadOnly(readOnly)}
-              className={styles.actionButton}>
-              Open in Editor mode
+              onClick={() => handleSave(readOnly, editorState)}
+              className={styles.saveButton}>
+              Save changes
             </button>
-          ) : null}
-          {readOnly ? null : (
-            <div className={styles.actionButtonsWrapper}>
-              <button
-                onClick={() => handleSave(readOnly, editorState)}
-                className={styles.saveButton}>
-                Save changes
-              </button>
-              <button
-                onClick={() => handleCancel(readOnly)}
-                className={styles.cancelButton}>
-                Cancel
-              </button>
-            </div>
-          )}
-        </div>
+            <button
+              onClick={() => handleCancel(readOnly)}
+              className={styles.cancelButton}>
+              Cancel
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

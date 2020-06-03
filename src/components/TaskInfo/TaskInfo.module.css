@@ -3,71 +3,60 @@
   height: 100%;
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  background: linear-gradient(to top, #f3f3f3, #f8f8f8);
-}
-
-.rightWrapper {
-  position: relative;
-  height: 100%;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.leftWrapper {
-  position: relative;
-  height: 100%;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.taskInfoWrapper {
-  position: relative;
-  height: 40%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.sortingWrapper {
-  position: relative;
-  height: 15%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.editorWrapper {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.taskEditorWrapper {
-  position: relative;
-  height: 60%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .listWrapper {
-  height: 85%;
+  position: relative;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.innerListWrapper {
+  position: relative;
+  height: 70%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-evenly;
+}
+
+.chartWrapper {
+  position: relative;
+  height: 90%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 40px;
+  background: #ffffff;
+  box-shadow: 27px 27px 60px #d1d1d1, -27px -27px 60px #f3f3f3;
+}
+
+.innerChartWrapper {
+  position: relative;
+  height: 50%;
+  width: 100%;
+}
+
+.fixedPercentage {
+  position: relative;
+  top: -36%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.percentage {
+  font-size: 20px;
 }

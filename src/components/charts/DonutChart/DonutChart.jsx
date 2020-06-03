@@ -45,10 +45,13 @@ const DonutChart = ({ data, type }) => {
         labels: ["In progress", "Finished", "Behind schedule", "To do"],
       };
       return chartData;
+    } else if (type === "steps") {
+      let chartData = { ...data };
+      return chartData;
     }
   };
 
-  let { chartData, labels } = getData(data, type);
+  let { chartData, labels, notFinished } = getData(data, type);
 
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
@@ -91,11 +94,9 @@ const DonutChart = ({ data, type }) => {
   return (
     <div className={styles.wrapper}>
       <canvas className={styles.canvas} id="myChart" ref={chartRef} />
-      {/* <div className={styles.textWrapper}>
-        {chartData.map((el) => {
-          return <h4>{`${labels[chartData.indexOf(el)]}: ${el}`}</h4>;
-        })}
-      </div> */}
+      {/* {type === "steps" && (
+        <h4>{`There's ${notFinished.length} steps left`}</h4>
+      )} */}
     </div>
   );
 };

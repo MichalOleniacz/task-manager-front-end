@@ -11,21 +11,23 @@ import styles from "./TaskCell.module.css";
 const TaskCell = ({ task }) => {
   return (
     <div className={styles.wrapper}>
-      <div className={styles.titleWrapper}>
-        <div className={styles.titleInnerWrapper}>
-          <div className={styles.iconWrapper}>
-            <img
-              src={getStatusIcon(task.status)}
-              alt="icon"
-              className={styles.icon}
-            />
+      <div className={styles.innerWrapper}>
+        <div className={styles.titleWrapper}>
+          <div className={styles.titleInnerWrapper}>
+            <div className={styles.iconWrapper}>
+              <img
+                src={getStatusIcon(task.status)}
+                alt="icon"
+                className={styles.icon}
+              />
+            </div>
+            <h3>{task.title}</h3>
           </div>
-          <h3>{task.title}</h3>
         </div>
-      </div>
-      <div className={styles.contentWrapper}>
-        <div className={styles.completion}>
-          <p>{`${task.completion}% Completed`}</p>
+        <div className={styles.contentWrapper}>
+          <div className={styles.completion}>
+            <p>{`${task.completion}% Completed`}</p>
+          </div>
         </div>
       </div>
       <div className={styles.bottomWrapper}>
